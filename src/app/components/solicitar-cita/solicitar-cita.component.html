@@ -1,0 +1,80 @@
+<div class="background">
+<div class="container">
+  <div class="row justify-content-center">
+    
+      <div class="col col-md-8 col-lg-5">
+          <div class="card animated fadeIn">
+              <div class="card-header">
+                Solicita tu cita
+              </div>
+              <div class="card-body">
+                  <form  [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
+                     
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Nombre</label>
+                    <input name="" class="form-control" [ngClass]="{'is-invalid' : !forma.get('nombre').valid}"
+                    formControlName="nombre"
+                    >
+                    <div *ngIf="forma.controls['nombre'].errors?.required">
+                      <small>Campo obligatorio</small> 
+                    </div> 
+                    </div>
+                      <div class="form-group">
+                          <label for="exampleInputPassword1">Categoria</label>
+                        <select name="" class="form-control">
+                          <option value="">Seleccione una opción</option>
+                        </select> 
+                      </div>
+                        
+                      <div class="form-group">
+                          <label for="exampleInputPassword1">Servicio</label>
+                        <select name="" class="form-control">
+                          <option value="">Seleccione una opción</option>
+                        </select>
+                        </div>
+                        <div class="form-group animated fadeIn fast" *ngIf="opcionesAvanzadas">
+                          <div class="row">
+                              <div class="col-12">
+                                  <label for="exampleInputPassword1">Médico</label>
+                                  <select name="" class="form-control">
+                                      <option value="">Seleccione una opción</option>
+                                    </select>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                  <label for="exampleInputPassword1">Fecha</label>
+                                  <input type="date" class="form-control">
+                              </div>
+                              
+                              <div class="col-12 col-md-6">
+                                  <label for="exampleInputPassword1">Hora</label>
+                                  <select name="" class="form-control">
+                                      <option value="">Seleccione una opción</option>
+                                    </select>
+                              </div>
+                            
+                          </div> 
+                         
+                          </div>
+                        
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" 
+                        [value]="opcionesAvanzadas"
+                        name="opcionesAvanzadas">
+                         <!-- [(ngModel)]="opcionesAvanzadas" -->
+                        <label class="form-check-label">Opciones avanzadas</label>
+                      </div>
+
+                      
+
+                      <div class="form-group">
+                        <small>Nuestra plataforma buscará la cita con fecha más cercana, si desea una fecha diferente selecciona <strong>opciones avanzadas</strong> </small>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Solicitar Cita</button>
+                    </form>
+              </div>
+            </div>
+      </div>
+
+  </div>
+</div>
+</div>
