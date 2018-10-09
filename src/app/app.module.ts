@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SolicitarCitaComponent } from './components/solicitar-cita/solicitar-cita.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/cuenta/login/login.component';
+import { RegistrarseComponent } from './components/cuenta/registrarse/registrarse.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './components/cuenta/login/login.component';
     FooterComponent,
     SolicitarCitaComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,
