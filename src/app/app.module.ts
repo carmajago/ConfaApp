@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { APP_ROUTING } from './app.routes';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -28,7 +31,8 @@ import { RegistrarseComponent } from './components/cuenta/registrarse/registrars
     BrowserModule,
     APP_ROUTING,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
