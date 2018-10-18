@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl , FormGroup , Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,18 +12,21 @@ export class SolicitarCitaComponent implements OnInit {
 
   opcionesAvanzadas = false;
 
-forma: FormGroup;
+  forma: FormGroup;
 
   constructor() {
     this.forma = new FormGroup({
-      'nombre': new FormControl('Carlos', Validators.required),
       'opcionesAvanzadas': new FormControl()
     });
-   }
+  }
 
   ngOnInit() {
   }
   guardar() {
     console.log(this.forma);
+  }
+  mostrarOpcionesAvanzadas() {
+    console.log("cambio");
+    this.opcionesAvanzadas = !this.opcionesAvanzadas;
   }
 }
